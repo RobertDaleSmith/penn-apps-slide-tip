@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Support Us</title>
+
+        <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="slider.js"></script>
+        <link href="pay_style.css" media="all" rel="stylesheet" type="text/css" />
+
+        <link href="gen_style.css" media="all" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body id="body_wrapper">
+
+
+        <div id="tip_jar_gen_wrapper">
+            <div id="title_config">Configuration</div>
+            <div id="title_preview">Preview</div>
+            <div id="tip_jar_gen_config">
+                
+                <form id="widget-form" class="form-horizontal" method="post" action="">
+
+                    <input type="hidden" value="user" name="widget" id="widget_type">
+
+                    <fieldset id="project_name_fieldset" class="control-group">
+                      <label for="project_name" class="control-label">Name</label>
+                      <div class="controls">
+                        <div class="controls-inner">
+                          <div class="input-prepend">
+                            <input type="text" id="project_name" class="project_name" name="project_name" autocomplete="on" spellcheck="false" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset id="pitch_msg_fieldset" class="control-group">
+                      <label for="pitch_msg" class="control-label">Pitch</label>
+                      <div class="controls">
+                        <div class="controls-inner">
+                          <div class="input-prepend">
+                            <input type="text" id="pitch_msg" class="pitch_msg" name="pitch_msg" autocomplete="on" spellcheck="false" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!--fieldset id="timeline_options" class="control-group">
+                        <h3 class="control-label">Options</h3>
+                        <div class="controls">
+
+                          <label for="hide_at_replies">
+                            <input type="checkbox" id="hide_at_replies" name="timeline_config[hide_at_replies]"  value="yes"> Exclude replies
+                          </label>
+
+                          <label>
+                            <input type="checkbox" name="display_config[expand_media]" checked> Auto-expand photos
+                          </label>
+                        </div>
+                    </fieldset-->
+
+                    <fieldset id="min_val_fieldset" class="control-group">
+                        <label for="min_val" class="control-label">Minimum $</label>
+                        <div class="controls">
+                          <input id="min_val" name="min_val" type="number" min="250" max="2000" step="5" placeholder="Default ($5)" value="5">
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="max_val_fieldset" class="control-group">
+                        <label for="max_val" class="control-label">Maximum $</label>
+                        <div class="controls">
+                          <input id="max_val" name="max_val" type="number" min="250" max="2000" step="10" placeholder="Default ($400)" value="400">
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="start_val_fieldset" class="control-group">
+                    <label for="start_val" class="control-label">Starting $</label>
+                    <div class="controls">
+                      <input id="start_val" name="start_val" type="number" min="250" max="2000" step="5" placeholder="Default ($30)" value="30">
+                    </div>
+                    </fieldset>
+
+                    <fieldset id="paypal_account_fieldset" class="control-group">
+                      <label for="paypal_account" class="control-label">PayPal Account</label>
+                      <div class="controls">
+                        <div class="controls-inner">
+                          <div class="input-prepend">
+                            <input type="text" id="pitch_msg" class="paypal_account" name="paypal_account" autocomplete="on" spellcheck="false" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                  <!--fieldset id="theme_fieldset" class="control-group">
+                    <label for="theme" class="control-label">Theme</label>
+                    <div class="controls">
+                      <select id="theme" name="display_config[theme]">
+                        <option selected value="light">Light</option>
+                        <option  value="dark">Dark</option>
+                      </select>
+                    </div>
+                  </fieldset>
+
+                  <fieldset id="link_color_fieldset" class="control-group">
+                    <label for="link_color" class="control-label">Link color</label>
+                    <div class="controls">
+                      <input id="link_color" maxlength="7" class="input-color"
+                       data-type="links_color" data-color="#0095A3"
+                       type="text" value="#0095A3" name="display_config[link_color]"
+                       autocomplete="off" spellcheck="off" placeholder="Default (blue)">
+                    </div>
+                    
+                  </fieldset-->
+
+
+                  <div class="form-actions">
+                    <button class="btn primary-btn" type="submit">
+                    Generate Code
+                    
+                    </button>
+                    <a href="/settings/widgets" class="btn">Reset</a>
+                  </div>
+                </form>
+
+            </div>
+            <div id="tip_jar_gen_preview">
+                
+                <div id="pay_wrapper">
+                    <div class="pay_body">
+                            <div id="pay_main">
+                                <div id="pay_pitch">
+                                    "The time to get in is NOW! We have a big dream and we have only just began to build it. Help fund our startup and we promise to build the 
+                                    most amazing second screen experiences to change the way you watch web content on any screen." - Robert
+                                    <br><br>
+                                </div>
+                
+                                <div id="pay-controls">
+                                        
+                                    <div class="instructions">Slide the slider to the right to bring us closer to our goal.</div>
+                                        
+                                    <input id="slider" type="range" min=0 max=100 value=27 />
+                                           
+                                    <div id="paySlider_holder" class="paySlider_holder">
+                                        <div id="paySlider" class="paySlider" data-role="slider" data-param-accuracy="1" data-param-init-value="27"></div>
+                                    </div>
+
+                                    <div id="amt-text">$<span id="amt-text-num"></span></div> 
+
+                                    <div id="payout">
+                                        <div id="gift">
+                                            <span>We'll</span>
+                                            <span class="why" min="2"   >send you X for helping out</span>
+                                            <span class="why" min="15"  >... and Y</span>
+                                            <span class="why" min="30"  >... and Z</span>
+                                            <span class="why" min="50"  >... and W</span>
+                                            <span class="why" min="70"  >... and X</span>
+                                            <span class="why" min="100"  >... and V</span>
+                                            <span class="why" min="200"  >... and U</span>
+                                            <span class="why" min="300"  >... and A</span>
+                                            <span class="why" min="400"  >... and B</span>.
+                                        </div>
+                      
+                                        <div id="not-paying" style="display:none">
+                                        We need your support to make this happen!
+                                        </div>
+                                    </div>
+
+                                    <br/>
+                                    <div id="payment-types" align="top">
+                                        <span id="paypal-xclick-form">
+                                            <form id="paypal-form" style="display: inline" action="https://www.paypal.com/cgi-bin/webscr"
+                                                method="post" name="_xclick" target="_blank">
+                                                <input type="hidden" name="cmd" value="_donations">
+                                                <input type="hidden" name="business" value="support@flinger.co">
+                                                <input type="hidden" name="item_name" value="Flinger.co Founding Member Contribution">
+                                                <input type="hidden" name="item_number" id="tracking-input" >
+                                                <input type="hidden" name="amount" id="amount-input">
+                                                <input type="hidden" name="currency_code" value="USD">
+                                                <input type="hidden" name="no_note" value="0">
+                                                <input type="hidden" name="return" value="http://flinger.co/support/thank-you/?src=paypal">
+                                                <input type="image" style="vertical-align: top" id="paypal-xclick-button" src="http://chromemote.com/wp-content/themes/wp-chromemote-3.0/images/paypal-xclick.png"/>
+                              
+                                                <input type="hidden" name="cbt" value="Go Back To The Site" />
+                                                <input type="hidden" name="no_shipping" value="1" />
+                                            </form>
+                                        </span>
+                                    </div> <!-- payment-types -->
+                                </div> <!-- pay-controls -->
+                            </div> <!-- pay_main -->
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+            
+                
+        <script src="pay_script.js"></script>
+                
+    </body>
+</html>
+
+        
