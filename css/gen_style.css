@@ -1,0 +1,282 @@
+#tip_jar_gen_wrapper{
+	position: relative;
+	display: inline-block;
+
+	width:835px;
+	margin:12px;
+
+	vertical-align: top;
+	text-align: top;
+}
+
+#tip_jar_iframe_wrapper{
+	position: relative;
+	display: inline-block;
+
+	width:440px;
+	margin:12px;
+
+	vertical-align: top;
+	text-align: top;
+}
+
+#tip_jar_gen_config{
+	position: relative;
+	display: inline-block;
+
+	width:360px;
+	height:100%;
+	min-height:360px;
+
+	float:left;
+}
+
+#tip_jar_gen_preview	{
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+
+	width:460px;
+	height:100%;
+	min-height:360px;
+
+	float:left;
+}
+
+#tip_jar_iframe_preview	{
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+
+	width:440px;
+	height:100%;
+
+	float:left;
+}
+
+#title_config{
+	position: relative;
+	display: inline-block;
+	
+	width:360px;
+
+	font-size:1.5em;
+	margin-bottom: 20px;
+
+	font-family: Arial;
+}
+#title_preview{
+	position: relative;
+	display: inline-block;
+
+	width:460px;
+	font-size:1.5em;
+	margin-bottom: 20px;
+
+	font-family: Arial;
+}
+
+.control-label{
+	position: relative;
+	display: inline-block;
+	
+}
+.control-group{
+	position: relative;
+	display: block;
+
+	border:0px;
+	vertical-align: top;
+	
+}
+.controls{
+	position: relative;
+	display: inline-block;
+	
+}
+
+.control-label{
+	position: relative;
+	display: inline-block;
+	
+
+	font-size:0.9em;
+	font-weight: normal;
+
+	font-family: Arial;
+
+	width:85px;
+
+	text-align: right;
+
+	margin-right:20px;
+}
+
+#whys_list{
+
+	border-width: 1px;
+	border-style: solid;
+
+	width:200px;
+	height:100px;
+
+	overflow-x:hidden;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+}
+
+.why_item{
+	display: block;
+	position: relative;
+	float: left;
+
+	height:38px;
+	width:100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+}
+
+.why_item_amount{
+	display: inline-block;
+	position: relative;
+	float: left;
+
+	height:36px;
+	width:30px;
+	text-align: center;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+}
+.why_item_message{
+	display: inline-block;
+	position: relative;
+	float: left;
+
+	height:36px;
+	width:110px;
+	text-align: center;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+}
+
+.why_delete_button{
+	display: inline-block;
+	position: relative;
+	float: left;
+
+	height:38px;
+	width:36px;
+
+	cursor:pointer;
+
+	background-image: url('../img/delete_icon.png');
+	background-repeat:no-repeat;
+	background-position:center; 
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+}
+
+.why_delete_button:hover{
+	background-color:#ff0;
+}
+.why_delete_button:active{
+	background-color:#000;
+}
+
+#why_save_button{
+	display: inline-block;
+	position: relative;
+	float: left;
+
+	height:38px;
+	width:36px;
+
+	cursor:pointer;
+
+	background-image: url('../img/save_icon.gif');
+	background-repeat:no-repeat;
+	background-position:center; 
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+}
+
+#why_save_button:hover{
+	background-color:#ff0;
+}
+#why_save_button:active{
+	background-color:#000;
+}
+
+#add_why_button{
+	display: block;
+	position: relative;
+	float: left;
+
+	height:32px;
+	width:100%;
+
+	text-align: center;
+	line-height: 32px;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #abadb3;
+
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#add_why_button:hover{
+	background-color:#ff0;
+}
+#add_why_button:active{
+	background-color:#000;
+	color:#fff;
+}
+
+#min_val{
+	width:100px;
+}
+#max_val{
+	width:100px;
+}
+#start_val{
+	width:100px;
+}
+
+#textarea_holder{
+	position: absolute;
+	bottom:0px;
+	display: inline-block;
+
+	margin-top:26px;
+}
+#textarea_source{
+	position: relative;
+	display: inline-block;
+
+	width:440px;
+	height:90px;
+}

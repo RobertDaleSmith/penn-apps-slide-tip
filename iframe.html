@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SlideTip</title>
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/slider.js"></script>
+        <script type="text/javascript" src="js/gen_script.js"></script>
+
+        <link href="css/pay_style.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/gen_style.css" media="all" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body id="body_wrapper_iframe">
+
+
+        
+            
+            
+            <div id='tip_jar_iframe_preview'>
+                
+                <div id='pay_wrapper'>
+                    <div class='pay_body'>
+                            <div id='pay_main'>
+                                <div id='pay_pitch'>
+                                    Like SlideTip, then show us some love by becoming a contributor. Every cent goes to improving SlideTip!
+                                    <br><br>
+                                </div>
+                
+                                <div id='pay-controls'>
+                                        
+                                    <div class='instructions'>Slide the slider to the right to bring us closer to our goal.</div>
+                                        
+                                    <input id='slider' type='range' min=0 max=100 value=27 />
+                                           
+                                    <div id='paySlider_holder' class='paySlider_holder'>
+                                        <div id='paySlider' class='paySlider' data-role='slider' data-param-accuracy='1' data-param-init-value='27'></div>
+                                    </div>
+
+                                    <div id='amt-text'>$<span id='amt-text-num'></span></div> 
+
+                                    <div id='payout'>
+                                        <div id='gift'>
+                                            <span>We'll</span>
+                                            <span class='why' min='2'   >send you X for helping out</span>
+                                            <span class='why' min='15'  >... and Y</span>
+                                            <span class='why' min='30'  >... and Z</span>
+                                            <span class='why' min='50'  >... and W</span>
+                                            <span class='why' min='70'  >... and X</span>
+                                            <span class='why' min='100'  >... and V</span>
+                                            <span class='why' min='200'  >... and U</span>
+                                            <span class='why' min='300'  >... and A</span>
+                                            <span class='why' min='400'  >... and B</span>.
+                                        </div>
+                      
+                                        <div id='not-paying' style='display:none'>
+                                        We need your support to make this happen!
+                                        </div>
+                                    </div>
+
+                                    <br/>
+                                    <div id='payment-types' align='top'>
+                                        <span id='paypal-xclick-form'>
+                                            <form id='paypal-form' style='display: inline' action='https://www.paypal.com/cgi-bin/webscr'
+                                                method='post' name='_xclick' target='_blank'>
+                                                <input type='hidden' name='cmd' value='_donations'>
+                                                <input type='hidden' name='business' value='contribute@slidetip.com' id='paypal_email_form'>
+                                                <input type='hidden' name='item_name' id='item_name' value='Flinger.co Founding Member Contribution'>
+                                                <input type='hidden' name='item_number' id='tracking-input' >
+                                                <input type='hidden' name='amount' id='amount-input'>
+                                                <input type='hidden' name='currency_code' value='USD'>
+                                                <input type='hidden' name='no_note' value='0'>
+                                                <input type='hidden' name='return' value='http://flinger.co/support/thank-you/?src=paypal'>
+                                                <input type='image' style='vertical-align: top' id='paypal-xclick-button' src='img/paypal-xclick.png'/>
+                              
+                                                <input type='hidden' name='cbt' value='Go Back To The Site' />
+                                                <input type='hidden' name='no_shipping' value='1' />
+                                            </form>
+                                        </span>
+                                    </div> <!-- payment-types -->
+                                </div> <!-- pay-controls -->
+                            </div> <!-- pay_main -->
+                                
+                    </div>
+                </div>
+
+            </div>
+       
+
+        
+            
+                
+        <script src="js/pay_script.js"></script>
+                
+    </body>
+</html>
+
+        
