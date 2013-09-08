@@ -1,220 +1,56 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html class="home">
+<head>
+  <title>SlideTip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/zocial.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="gradient-border"></div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <a href="index.html" class="logo pull-left"><img src="img/logo.png"/></a>
+      </div>
+      <div class="span6">
+        <a href="#" class="zocial facebook btn-connect pull-right">Login</a>
+        <a href="#" class="zocial icon-user logged-in pull-right">Username</a>
+      </div>
+    </div><!-- /.row -->
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>SlideTip</title>
+    <div class="row">
+      <div class="span10 offset1 hero">
+        <h1>The <span class="fancy">embeddable</span> donation slider<br>for your website</h1>
+      </div>
+    </div><!-- /.row -->
 
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="js/slider.js"></script>
-        <script type="text/javascript" src="js/gen_script.js"></script>
+    <div class="row browser">
+      <div class="span8 offset2">
+        <h2>Make your own <a href="widget.html">here</a>.</h2>
+        <h3>Try it out below!</h3>
+          <iframe src="iframe.html">
+            <p>Your browser does not support iframes! Oops!</p>
+          </iframe>
+      </div>
+    </div><!-- /.row -->
 
-        <link href="css/pay_style.css" media="all" rel="stylesheet" type="text/css" />
-        <link href="css/gen_style.css" media="all" rel="stylesheet" type="text/css" />
+    <div class="row footer">
+      <div class="span10 offset1">
+        SlideTip is awesome. Developed at PennApps Fall 2013.
+      </div>
+    </div><!-- /.row -->    
+  </div><!-- /.container -->
 
-    </head>
-    <body id="body_wrapper">
-
-
-        <div id="tip_jar_gen_wrapper">
-            <div id="title_config">Configuration</div>
-            <div id="title_preview">Preview</div>
-            <div id="tip_jar_gen_config">
-                
-                <form id="widget-form" class="form-horizontal" method="post" action="">
-
-                    <input type="hidden" value="user" name="widget" id="widget_type">
-
-                    <fieldset id="project_name_fieldset" class="control-group">
-                      <label for="project_name" class="control-label">Name</label>
-                      <div class="controls">
-                        <div class="controls-inner">
-                          <div class="input-prepend">
-                            <input type="text" id="project_name" class="project_name" name="project_name" autocomplete="on" spellcheck="false" value="">
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-
-                    <fieldset id="pitch_msg_fieldset" class="control-group">
-                      <label for="pitch_msg" class="control-label">Pitch</label>
-                      <div class="controls">
-                        <div class="controls-inner">
-                          <div class="input-prepend">
-                            <input type="text" id="pitch_msg" class="pitch_msg" name="pitch_msg" autocomplete="on" spellcheck="false" value="">
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-
-                    <!--fieldset id="timeline_options" class="control-group">
-                        <h3 class="control-label">Options</h3>
-                        <div class="controls">
-
-                          <label for="hide_at_replies">
-                            <input type="checkbox" id="hide_at_replies" name="timeline_config[hide_at_replies]"  value="yes"> Exclude replies
-                          </label>
-
-                          <label>
-                            <input type="checkbox" name="display_config[expand_media]" checked> Auto-expand photos
-                          </label>
-                        </div>
-                    </fieldset-->
-
-                    <fieldset id="min_val_fieldset" class="control-group">
-                        <label for="min_val" class="control-label">Minimum $</label>
-                        <div class="controls">
-                          <input id="min_val" name="min_val" type="number" min="1" max="2000" step="5" placeholder="Default ($5)" value="">
-                        </div>
-                    </fieldset>
-
-                    <fieldset id="max_val_fieldset" class="control-group">
-                        <label for="max_val" class="control-label">Maximum $</label>
-                        <div class="controls">
-                          <input id="max_val" name="max_val" type="number" min="1" max="2000" step="10" placeholder="Default ($400)" value="">
-                        </div>
-                    </fieldset>
-
-                    <fieldset id="start_val_fieldset" class="control-group">
-                    <label for="start_val" class="control-label">Starting $</label>
-                    <div class="controls">
-                      <input id="start_val" name="start_val" type="number" min="1" max="2000" step="5" placeholder="Default ($30)" value="">
-                    </div>
-                    </fieldset>
-
-                    <fieldset id="paypal_email_fieldset" class="control-group">
-                      <label for="paypal_email" class="control-label">PayPal Email</label>
-                      <div class="controls">
-                        <div class="controls-inner">
-                          <div class="input-prepend">
-                            <input type="text" id="paypal_email" class="paypal_email" name="paypal_email" autocomplete="on" spellcheck="false" value="">
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-
-                    <fieldset id="whys_fieldset" class="control-group">
-                      <label for="whys" class="control-label">Reasons why to contribute</label>
-                      <div class="controls">
-                        <div class="controls-inner">
-                          <div class="input-prepend">
-                            <!--input type="text" id="pitch_msg" class="whys" name="whys" autocomplete="on" spellcheck="false" value=""-->
-                            <div id="whys_list">
-                              <div id="add_why_button">+ add a why value</div>
-                              <!--div class="why_item" id="whys_0">
-                                  <input class="why_item_amount" value="0">
-                                  <input class="why_item_message" value="I really need your help!">
-                                  <div class="why_delete_button" id="delete_0"> </div>
-                              </div>
-                              <div class="why_item" id="whys_15">
-                                  <input class="why_item_amount" value="15">
-                                  <input class="why_item_message" value="send you a thank you letter from the bottom of my heart.">
-                                  <div class="why_delete_button" id="delete_0"></div>
-                              </div>
-                              <div class="why_item" id="whys_25">
-                                  <input class="why_item_amount" value="25">
-                                  <input class="why_item_message" value="send you a thank you letter from the bottom of my heart.">
-                                  <div class="why_delete_button" id="delete_0"></div>
-                              </div-->
-                              
-                            </div>
-
-
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-
-                  <div class="form-actions">
-                    <button class="btn primary-btn" type="submit">
-                    Generate Code
-                    
-                    </button>
-                    <a href="/settings/widgets" class="btn">Reset</a>
-                  </div>
-                </form>
-
-            </div>
-            <div id='tip_jar_gen_preview'>
-                
-                <div id='pay_wrapper'>
-                    <div class='pay_body'>
-                            <div id='pay_main'>
-                                <div id='pay_pitch'>
-                                    Like SlideTip, then show us some love by becoming a contributor. Every cent goes to improving SlideTip!
-                                    <br><br>
-                                </div>
-                
-                                <div id='pay-controls'>
-                                        
-                                    <div class='instructions'>Slide the slider to the right to bring us closer to our goal.</div>
-                                        
-                                    <input id='slider' type='range' min=0 max=100 value=27 />
-                                           
-                                    <div id='paySlider_holder' class='paySlider_holder'>
-                                        <div id='paySlider' class='paySlider' data-role='slider' data-param-accuracy='1' data-param-init-value='27'></div>
-                                    </div>
-
-                                    <div id='amt-text'>$<span id='amt-text-num'></span></div> 
-
-                                    <div id='payout'>
-                                        <div id='gift'>
-                                            <span>We'll</span>
-                                            <span class='why' min='2'   >send you X for helping out</span>
-                                            <span class='why' min='15'  >... and Y</span>
-                                            <span class='why' min='30'  >... and Z</span>
-                                            <span class='why' min='50'  >... and W</span>
-                                            <span class='why' min='70'  >... and X</span>
-                                            <span class='why' min='100'  >... and V</span>
-                                            <span class='why' min='200'  >... and U</span>
-                                            <span class='why' min='300'  >... and A</span>
-                                            <span class='why' min='400'  >... and B</span>.
-                                        </div>
-                      
-                                        <div id='not-paying' style='display:none'>
-                                        We need your support to make this happen!
-                                        </div>
-                                    </div>
-
-                                    <br/>
-                                    <div id='payment-types' align='top'>
-                                        <span id='paypal-xclick-form'>
-                                            <form id='paypal-form' style='display: inline' action='https://www.paypal.com/cgi-bin/webscr'
-                                                method='post' name='_xclick' target='_blank'>
-                                                <input type='hidden' name='cmd' value='_donations'>
-                                                <input type='hidden' name='business' value='contribute@slidetip.com' id='paypal_email_form'>
-                                                <input type='hidden' name='item_name' id='item_name' value='Flinger.co Founding Member Contribution'>
-                                                <input type='hidden' name='item_number' id='tracking-input' >
-                                                <input type='hidden' name='amount' id='amount-input'>
-                                                <input type='hidden' name='currency_code' value='USD'>
-                                                <input type='hidden' name='no_note' value='0'>
-                                                <input type='hidden' name='return' value='http://flinger.co/support/thank-you/?src=paypal'>
-                                                <input type='image' style='vertical-align: top' id='paypal-xclick-button' src='img/paypal-xclick.png'/>
-                              
-                                                <input type='hidden' name='cbt' value='Go Back To The Site' />
-                                                <input type='hidden' name='no_shipping' value='1' />
-                                            </form>
-                                        </span>
-                                    </div> <!-- payment-types -->
-                                </div> <!-- pay-controls -->
-                            </div> <!-- pay_main -->
-                                
-                    </div>
-                </div>
-
-                <div id="textarea_holder">
-                    <textarea id="textarea_source">http://slidetip.com/?devicename=My%20Project& </textarea>
-                </div>
-
-            </div>
-        </div>
-
-        
-            
-                
-        <script src="js/pay_script.js"></script>
-                
-    </body>
+<!-- JavaScripts -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
+</body>
 </html>
-
-        
